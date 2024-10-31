@@ -1,0 +1,11 @@
+{
+	"name": "billing-app",
+	"version": "1.0.0",
+	"description": "Billing tracker app",
+	"main": "index.js",
+	"scripts": {
+		"start": "node --watch backend/server.js"
+	},
+	"author": "",
+	"license": "ISC"
+}
