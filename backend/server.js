@@ -1,11 +1,16 @@
 import express from 'express';
+import colors from 'colors';
 import dotenv from 'dotenv';
 import router from './routes/userRoutes.js';
 import errorHandler from './middleware/errorMiddleware.js';
+import connectDB from './config/db.js';
 
 dotenv.config();
 
 const PORT = process.env.PORT || 5000;
+
+// Conect to database
+connectDB();
 
 const app = express();
 
