@@ -47,6 +47,19 @@ export const registerUser = expressAsyncHandler(async (req, res) => {
 	}
 });
 
+// @desc   Get current user
+// @route  /api/users/me
+// @access Private
+export const getMe = expressAsyncHandler(async (req, res) => {
+	const user = {
+		id: req.user._id,
+		email: req.user.email,
+		name: req.user.name,
+	};
+
+	res.status(200).json(user);
+});
+
 // @desc   Login user
 // @route  /api/users/login
 // @access Public
